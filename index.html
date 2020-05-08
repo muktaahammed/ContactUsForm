@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sample Form</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ 
+  <!--error in input-->
+    <script src="custom_js/gen_validatorv31.js"></script>
+  <!--error in input-->    
+</head>
+<body>
+<!--Start Contact US-->
+  <div class="container mt-5">
+    <h3 class="text-center">GET IN TOUCH</h3>
+    <h5 class="text-center text-dark mb-5">Give your feedback to us</h5>
+
+      <div class="col-3 mb-4">
+        <!--action="PHPCode/message.php"
+          You will use your php messahe link
+          EX: https://yourwebsite.com/foldername(if have)/message.php
+        -->
+        <form method="POST" action="https://yourwebsite.com/foldername/message.php" name="contactform">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="inputAddress">Your name<sup class="text-danger">*</sup></label>
+                <input type="text" name="name" class="form-control bg-light" id="inputAddress" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Your email<sup class="text-danger">*</sup></label>
+                <input type="email" name="email" class="form-control bg-light" id="inputAddress" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Message<sup class="text-danger">*</sup></label>
+                <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm btn-block">SUBMIT</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+<!--End Contact US-->
+
+<!--Check Field validation-->
+  <script language="JavaScript">
+    var frmvalidator = new Validator("contactform");
+    frmvalidator.addValidation("name", "req", "Please provide your name");
+    frmvalidator.addValidation("email", "req", "Please provide your email");
+    frmvalidator.addValidation("message", "req", "Please write to us");
+    frmvalidator.addValidation("email", "email", "Please enter a valid email address");
+  </script>
+  <!--Check Field validation-->
+
+</body>
+</html>
