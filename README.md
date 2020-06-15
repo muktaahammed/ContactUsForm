@@ -19,6 +19,10 @@ The final part is to set a valid mail address where you want to forward your web
 
 ![](forwared.png)
 
+Here you can see the mail already forwarded to the gmail address(You can use any mail address).
+
+![](mail-forwarded.png)
+
 Hope this will help you as an alternative of using PHPmailer.
 
 **HappyCoding**
