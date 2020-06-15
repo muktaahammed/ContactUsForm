@@ -3,9 +3,9 @@
     require_once 'connect.php';
     
     $errors = '';
-    /*Here you must use your webmial address don't use gmail or others mail address. 
-    You will forward this message to any gmail or others from your cpnael mail setting
-    Just follow me. See in the picture attached this file and follow the process */
+    /*Here you must use your webmial address. don't use gmail or others mail address. 
+    You can forward this message to any gmail or others from your cpanel mail setting
+    Just follow me. See in the picture attached this file and do the process */
     $myemail = 'admin@rbfgroupbd.com'; 
     if(empty($_POST['name'])  || empty($_POST['email']) || empty($_POST['message'])){    
         $errors .= "\n Error: all fields are required";
@@ -35,8 +35,8 @@
 	    header('Location: ../thank-you.html');
     } 
     
-    //(MyUserMessage) This will be replace with your created table name 
-    $sql = "INSERT INTO MyUserMessage (name, email, message) VALUES ('$name', '$email_address', '$message')";
+    //(UserMessage) This will be replace with your created table name 
+    $sql = "INSERT INTO UserMessage (name, email, message) VALUES ('$name', '$email_address', '$message')";
 
     if ($conn->query($sql) === TRUE) {
     echo "Thank you for your feedback.";
